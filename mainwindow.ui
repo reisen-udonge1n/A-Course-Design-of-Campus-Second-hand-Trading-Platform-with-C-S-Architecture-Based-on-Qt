@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QWidget" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>502</width>
+    <height>265</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="m_notificationBar">
+     <property name="visible">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame { background: transparent; }</string>
+     </property>
+     <property name="fixedHeight" stdset="0">
+      <number>56</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="m_stackedWidget">
+     <property name="styleSheet">
+      <string notr="true">background-color: #f5f6fa;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="m_navWidget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget { background-color: #ffffff; border-top: 1px solid #e0e0e0; }</string>
+     </property>
+     <property name="fixedHeight" stdset="0">
+      <number>65</number>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

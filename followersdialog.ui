@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FollowersDialog</class>
+ <widget class="QDialog" name="FollowersDialog">
+  <property name="windowTitle">
+   <string>我的关注</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog { background-color: #f5f6fa; }</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="spacing">
+    <number>12</number>
+   </property>
+   <property name="leftMargin">
+    <number>15</number>
+   </property>
+   <property name="topMargin">
+    <number>15</number>
+   </property>
+   <property name="rightMargin">
+    <number>15</number>
+   </property>
+   <property name="bottomMargin">
+    <number>15</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="tabsLayout">
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="m_followingTab">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>已关注</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  background-color: #3498db; color: white; border: none;
+  border-radius: 8px; font-size: 14px; font-weight: bold; padding: 6px 16px;
+}
+QPushButton:hover { background-color: #2980b9; }</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_discoverTab">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>发现用户</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  background-color: #f0f0f0; color: #555; border: none;
+  border-radius: 8px; font-size: 14px; font-weight: bold; padding: 6px 16px;
+}
+QPushButton:hover { background-color: #e0e0e0; }</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="m_searchEdit">
+     <property name="placeholderText">
+      <string>搜索用户名...</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+  min-height: 36px; padding: 0 15px;
+  border: 2px solid #e0e0e0; border-radius: 18px;
+  font-size: 14px; background-color: #ffffff; color: #333;
+}
+QLineEdit:focus { border-color: #3498db; }</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="m_listWidget">
+     <property name="styleSheet">
+      <string notr="true">QListWidget { background-color: #ffffff; border-radius: 10px; border: none; }
+QListWidget::item { padding: 12px 15px; border-bottom: 1px solid #f0f0f0; }
+QListWidget::item:last { border-bottom: none; }
+QListWidget::item:hover { background-color: #f8f9fa; }</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="btnLayout">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="m_actionBtn">
+       <property name="text">
+        <string>取消关注</string>
+       </property>
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="fixedHeight">
+        <number>40</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  background-color: #e74c3c; color: white; border: none;
+  border-radius: 10px; font-size: 14px; font-weight: bold;
+}
+QPushButton:hover { background-color: #c0392b; }
+QPushButton:disabled { background-color: #bdc3c7; }</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_viewProductsBtn">
+       <property name="text">
+        <string>查看商品</string>
+       </property>
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="fixedHeight">
+        <number>40</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  background-color: #2ecc71; color: white; border: none;
+  border-radius: 10px; font-size: 14px; font-weight: bold;
+}
+QPushButton:hover { background-color: #27ae60; }
+QPushButton:disabled { background-color: #bdc3c7; }</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

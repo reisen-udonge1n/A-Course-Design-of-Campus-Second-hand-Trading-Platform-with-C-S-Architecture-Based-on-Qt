@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChatDialog</class>
+ <widget class="QDialog" name="ChatDialog">
+  <property name="styleSheet">
+   <string notr="true">QDialog { background-color: #f5f6fa; }</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="header" native="true">
+     <property name="fixedHeight">
+      <number>55</number>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget { background-color: #ffffff; border-bottom: 1px solid #e0e0e0; }</string>
+     </property>
+     <layout class="QHBoxLayout" name="headerLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="m_backBtn">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="fixedWidth">
+         <number>60</number>
+        </property>
+        <property name="text">
+         <string>← 关闭</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { background: transparent; border: none; font-size: 14px; color: #3498db; }
+QPushButton:hover { color: #2980b9; }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_followBtn">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="fixedWidth">
+         <number>65</number>
+        </property>
+        <property name="text">
+         <string>+ 关注</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+  background-color: #3498db; color: white; border: none;
+  border-radius: 15px; font-size: 13px; font-weight: bold;
+}
+QPushButton:hover { background-color: #2980b9; }
+QPushButton:disabled { background-color: #bdc3c7; }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="infoLayout">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="m_titleLabel">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: #2c3e50; background: transparent; font-size: 16px; font-weight: bold;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="m_statusLabel">
+          <property name="text">
+           <string>连接中...</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: #95a5a6; font-size: 11px; background: transparent;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="m_scrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QScrollArea { border: none; background: #ebeef5; }
+QScrollBar:vertical { width: 4px; }
+QScrollBar::handle:vertical { background: #ccc; border-radius: 2px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="inputBar" native="true">
+     <property name="fixedHeight">
+      <number>60</number>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget { background-color: #ffffff; border-top: 1px solid #e0e0e0; }</string>
+     </property>
+     <layout class="QHBoxLayout" name="inputLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>12</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>12</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QLineEdit" name="m_inputEdit">
+        <property name="maxLength">
+         <number>500</number>
+        </property>
+        <property name="placeholderText">
+         <string>输入消息...</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+  min-height: 36px; padding: 0 15px;
+  border: 2px solid #e0e0e0; border-radius: 18px;
+  font-size: 14px; background-color: #f5f6fa; color: #333;
+}
+QLineEdit:focus { border-color: #3498db; background-color: #ffffff; }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_sendBtn">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="fixedSize">
+         <size>
+          <width>60</width>
+          <height>38</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>发送</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+  background-color: #3498db; color: white; border: none;
+  border-radius: 19px; font-size: 14px; font-weight: bold;
+}
+QPushButton:hover { background-color: #2980b9; }
+QPushButton:disabled { background-color: #bdc3c7; }</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

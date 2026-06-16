@@ -1,0 +1,13 @@
+# 构建输出
+build/
+bin/
+temp/
+
+# IDE 文件
+*.user
+*.pro.user*
+CMakeUserPresets.json
+
+# 系统文件
+Thumbs.db
+.DS_Store

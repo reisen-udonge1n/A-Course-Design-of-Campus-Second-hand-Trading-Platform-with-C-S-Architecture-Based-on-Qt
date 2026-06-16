@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserProductsDialog</class>
+ <widget class="QDialog" name="UserProductsDialog">
+  <property name="styleSheet">
+   <string notr="true">QDialog { background-color: #f5f6fa; }</string>
+  </property>
+  <layout class="QVBoxLayout" name="outerLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QScrollArea { border: none; background: transparent; }
+QScrollBar:vertical { width: 4px; }
+QScrollBar::handle:vertical { background: #ccc; border-radius: 2px; }</string>
+     </property>
+     <widget class="QWidget" name="page">
+      <property name="styleSheet">
+       <string notr="true">background-color: #f5f6fa;</string>
+      </property>
+      <layout class="QVBoxLayout" name="pageLayout">
+       <property name="spacing">
+        <number>15</number>
+       </property>
+       <property name="leftMargin">
+        <number>15</number>
+       </property>
+       <property name="topMargin">
+        <number>15</number>
+       </property>
+       <property name="rightMargin">
+        <number>15</number>
+       </property>
+       <property name="bottomMargin">
+        <number>15</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="m_headerLabel">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 20px; font-weight: bold; color: #2c3e50;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="m_emptyLabel">
+         <property name="text">
+          <string>暂无发布商品</string>
+         </property>
+         <property name="visible">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #bdc3c7; font-size: 16px; padding: 60px 0; background: transparent;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="m_gridWidget" native="true">
+         <property name="styleSheet">
+          <string notr="true">background: transparent;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
