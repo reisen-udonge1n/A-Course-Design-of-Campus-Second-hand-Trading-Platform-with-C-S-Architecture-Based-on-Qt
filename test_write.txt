@@ -1,3 +1,0 @@
-// 测试写入 test line
-#include <iostream>
-printf("hello world");
